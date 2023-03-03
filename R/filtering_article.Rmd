@@ -1,0 +1,22 @@
+---
+title: "О фильтрации сигналов на базе малоранговых скелетонных аппроксимаций"
+author: "Юрченков Иван Александрович"
+date: "`r Sys.Date()`"
+output: pdf_document
+    latex_engine: xelatex
+    sansfont: Calibri Light
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, out.width = "75%", fig.align = "center", 
+                      fig.height = 8, fig.width = 8, dpi = 256)
+source("hist_table.R")
+source("chisq2_test.R")
+source("sliding_window.R")
+source("filtering_interface.R")
+```
+
+
+# **Аннотация**
+
+В работе рассмотрена возможность проводить процедуру фильтрации результатов измерений процесса или сигнала во времени 
