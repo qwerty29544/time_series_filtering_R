@@ -1,0 +1,46 @@
+---
+title: "Обработка сигналов в R (Signal processing in R)"
+author: "Юрченков Иван Александрович (Yurchenkov I.A.)"
+date: "2024-02-16"
+output: 
+  html_document: 
+    toc: true
+    toc_depth: 2
+    highlight: textmate
+    theme: paper
+    fig_width: 9
+    fig_height: 6
+    fig_caption: true
+    df_print: tibble
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      fig.align = "center", 
+                      out.width = "75%", 
+                      results = "hold", 
+                      dpi = 256)
+```
+
+# Файловый ввод/вывод
+
+# Графика в R
+
+```{r}
+set.seed(123)
+t = seq(0, 4, 0.05)
+uniform_noise = runif(length(t), -1, 1)
+noise_level = 2.5
+
+signal = sin(2*pi*t)
+signal2 = sin(8*pi*t)
+signal3 = sin(6*pi*t)/t^0.5
+signal3_n = signal3 * (1 + noise_level * uniform_noise)
+
+plot(t, signal3_n, col="red", cex=I(0.4), lwd=I(0.5), pch=19, type="o")
+lines(t, signal3, col = "blue", cex=I(0.6), lwd=I(.8), pch=20, type="o")
+title(main="Базовая графика в R")
+```
+
+
+
